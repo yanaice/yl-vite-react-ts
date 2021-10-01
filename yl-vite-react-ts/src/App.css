@@ -1,42 +1,44 @@
-.App {
-  text-align: center;
-}
+/* ################################################## */
+/* common use class or extends class from tailwindcss */
+/* ################################################## */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* To avoid unintended specificity issues, we recommend wrapping your custom component styles with the */
+@layer components {
+  .btn {
+    @apply py-3 px-6 rounded-xl focus:outline-none text-base;
   }
-  to {
-    transform: rotate(360deg);
+  .btn.btn-primary:enabled {
+    @apply bg-primary-500 text-white border-2 border-primary-500 font-semibold hover:bg-primary-700;
+  }
+  .btn.btn-secondary {
+    @apply text-gray-500 border-2 border-gray-200 font-semibold hover:opacity-10;
+  }
+  .nav-bar {
+    box-shadow: 0 5px 2px -2px rgb(50 50 50 / 10%);
+    @apply bg-white p-4;
+  }
+  .page-container {
+    @apply flex flex-col h-full;
+  }
+  .scroll-content {
+    @apply flex-1 overflow-y-auto;
+  }
+  .footer {
+    box-shadow: rgb(50 50 50 / 7%) 0px -4px 3px;
+    @apply bg-white p-4;
+  }
+  .grid-cols-1fr-auto {
+    grid-template-columns: 1fr auto;
   }
 }
 
-button {
-  font-size: calc(10px + 2vmin);
-}
+
