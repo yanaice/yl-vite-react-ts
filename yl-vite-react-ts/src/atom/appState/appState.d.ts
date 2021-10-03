@@ -1,5 +1,5 @@
 interface IAppState {
-  loading: boolean
-  errorMsg: string
-  successMsg: string
+	loading: boolean
+	errorMsg: string
+	successMsg: string
 }

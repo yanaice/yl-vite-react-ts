@@ -3,42 +3,40 @@
 /* ################################################## */
 
 @layer base {
-  h1 {
-    @apply text-2xl;
-  }
-  h2 {
-    @apply text-xl;
-  }
+	h1 {
+		@apply text-2xl;
+	}
+	h2 {
+		@apply text-xl;
+	}
 }
 
 /* To avoid unintended specificity issues, we recommend wrapping your custom component styles with the */
 @layer components {
-  .btn {
-    @apply py-3 px-6 rounded-xl focus:outline-none text-base;
-  }
-  .btn.btn-primary:enabled {
-    @apply bg-primary-500 text-white border-2 border-primary-500 font-semibold hover:bg-primary-700;
-  }
-  .btn.btn-secondary {
-    @apply text-gray-500 border-2 border-gray-200 font-semibold hover:opacity-10;
-  }
-  .nav-bar {
-    box-shadow: 0 5px 2px -2px rgb(50 50 50 / 10%);
-    @apply bg-white p-4;
-  }
-  .page-container {
-    @apply flex flex-col h-full;
-  }
-  .scroll-content {
-    @apply flex-1 overflow-y-auto;
-  }
-  .footer {
-    box-shadow: rgb(50 50 50 / 7%) 0px -4px 3px;
-    @apply bg-white p-4;
-  }
-  .grid-cols-1fr-auto {
-    grid-template-columns: 1fr auto;
-  }
+	.btn {
+		@apply py-3 px-6 rounded-xl focus:outline-none text-base;
+	}
+	.btn.btn-primary:enabled {
+		@apply bg-primary-500 text-white border-2 border-primary-500 font-semibold hover:bg-primary-700;
+	}
+	.btn.btn-secondary {
+		@apply text-gray-500 border-2 border-gray-200 font-semibold hover:opacity-10;
+	}
+	.nav-bar {
+		box-shadow: 0 5px 2px -2px rgb(50 50 50 / 10%);
+		@apply bg-white p-4;
+	}
+	.page-container {
+		@apply flex flex-col h-full;
+	}
+	.scroll-content {
+		@apply flex-1 overflow-y-auto;
+	}
+	.footer {
+		box-shadow: rgb(50 50 50 / 7%) 0px -4px 3px;
+		@apply bg-white p-4;
+	}
+	.grid-cols-1fr-auto {
+		grid-template-columns: 1fr auto;
+	}
 }
-
-
