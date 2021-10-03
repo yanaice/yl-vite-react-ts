@@ -2,8 +2,8 @@
 	"name": "yl-vite-react-ts",
 	"version": "0.0.0",
 	"scripts": {
-		"start": "vite && prettier-watch",
-		"dev": "vite && prettier-watch",
+		"start": "vite",
+		"dev": "vite",
 		"build": "tsc && vite build",
 		"build-sit": "vite build --mode staging",
 		"build-prod": "vite build --mode production",
@@ -16,6 +16,7 @@
 		"react-dom": "^17.0.0",
 		"react-router-dom": "^5.3.0",
 		"recoil": "^0.4.1",
+		"styled-components": "^5.3.1",
 		"swr": "^1.0.1"
 	},
 	"devDependencies": {

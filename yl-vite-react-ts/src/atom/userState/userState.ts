@@ -1,6 +1,6 @@
-import { atom } from "recoil"
+import {atom} from "recoil"
 
 export const userState = atom<IUser>({
-	key: "userState",
-	default: null,
+  key: "userState",
+  default: null,
 })

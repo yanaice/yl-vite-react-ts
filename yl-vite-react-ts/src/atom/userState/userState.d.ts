@@ -1,3 +1,3 @@
 interface IUser {
-	firstName: string
+  firstName: string
 }

@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from "react"
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom"
+import React, {Suspense, lazy} from "react"
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom"
 import config from "./config/config"
 import "./App.css"
 
@@ -13,22 +13,22 @@ const LoginPage = lazy(() => import("./pages/Login/LoginPage"))
 //   </Route>
 // }
 
-function App() {
-	return (
-		<Suspense fallback={<div></div>}>
-			<BrowserRouter>
-				<Switch>
-					<Route exact path="/login">
-						<LoginPage message="hello" />
-					</Route>
-					{/* <PrivateRoute exact path="/home">
+function App(): JSX.Element {
+  return (
+    <Suspense fallback={<div></div>}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/login'>
+            <LoginPage message='hello' />
+          </Route>
+          {/* <PrivateRoute exact path="/home">
           <LoginPage />
         </PrivateRoute> */}
-					<Redirect from="*" to="/login" />
-				</Switch>
-			</BrowserRouter>
-		</Suspense>
-	)
+          <Redirect from='*' to='/login' />
+        </Switch>
+      </BrowserRouter>
+    </Suspense>
+  )
 }
 
 export default App

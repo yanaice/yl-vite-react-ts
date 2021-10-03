@@ -22,6 +22,7 @@ In order to configure prettier, a .prettierrc.js file is required at the root pr
 "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true
 },
+"editor.formatOnSave": true,
 ```
 - `package.json -> scripts -> lint`
 
