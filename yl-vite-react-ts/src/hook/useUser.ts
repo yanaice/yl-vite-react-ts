@@ -1,7 +1,7 @@
-import useAxios, {IExecuteResponse} from "./useAxios"
+import useAxios, { APIResponse } from './useAxios'
 
-export type UserNamePrefix = "นาย" | "นาง" | "นางสาว"
-export type UserIdType = "citizen_id" | "passport"
+export type UserNamePrefix = 'นาย' | 'นาง' | 'นางสาว'
+export type UserIdType = 'citizen_id' | 'passport'
 
 export interface IUser {
   id?: string
@@ -12,7 +12,7 @@ export interface IUser {
   idType: UserIdType
   nationalId: string
   phone: string
-  nationality: "thai" | string
+  nationality: 'thai' | string
 }
 
 interface ILogin {
@@ -21,25 +21,26 @@ interface ILogin {
 }
 
 const useUser = () => {
-  const {execute} = useAxios()
+  const { execute } = useAxios()
 
   const login = async ({
     username,
     password,
-  }: ILogin): Promise<IExecuteResponse<IUser>> => {
+  }: ILogin): Promise<APIResponse<IUser>> => {
     const result = await execute({
       func: () => ({
-        method: "POST",
-        url: "/api/v1/users",
+        method: 'POST',
+        url: '/api/v1/users',
         data: {
           username,
           password,
         },
       }),
       skipLoading: false,
-      enableFallbackError: ({errorCode}: IExecuteResponse) => {
-        if (["USER_ALREADY_EXISTS"].includes(errorCode)) return false
-        return true
+      skipError: ({ error }: APIResponse) => {
+        if (error?.code && ['USER_ALREADY_EXISTS'].includes(error?.code))
+          return true
+        return false
       },
     })
 

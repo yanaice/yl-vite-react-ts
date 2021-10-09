@@ -1,6 +1,6 @@
-import React from "react"
-import LoadingOverlay from "react-loading-overlay-ts"
-import styled from "styled-components"
+import React from 'react'
+import LoadingOverlay from 'react-loading-overlay-ts'
+import styled from 'styled-components'
 
 const StyledLoader = styled(LoadingOverlay)`
   &.MyLoader_wrapper {
@@ -23,7 +23,7 @@ interface Props {
   text?: string | undefined
 }
 
-const Loading: React.FC<Props> = ({active, text, children}) => {
+const Loading: React.FC<Props> = ({ active, text, children }) => {
   return (
     <StyledLoader
       classNamePrefix='MyLoader_'

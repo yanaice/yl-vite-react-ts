@@ -1,10 +1,10 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import {SWRConfig} from "swr"
-import {RecoilRoot} from "recoil"
-import axios from "./client/axios"
-import "./index.css"
-import App from "./App"
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { SWRConfig } from 'swr'
+import { RecoilRoot } from 'recoil'
+import axios from './client/axios'
+import './index.css'
+import App from './App'
 
 const swrConfig = {
   fetcher: (url: string) => axios.get(url).then((res) => res.data),
@@ -22,5 +22,5 @@ ReactDOM.render(
       </RecoilRoot>
     </SWRConfig>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 )

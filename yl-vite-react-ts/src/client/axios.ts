@@ -1,12 +1,12 @@
-import axios from "axios"
-import config from "../config/config"
+import axios from 'axios'
+import config from '../config/config'
 
 const client = axios.create({
   baseURL: config.BASE_URL,
   withCredentials: true,
 })
 
-axios.defaults.headers.common["Content-type"] = "application/json"
+axios.defaults.headers.common['Content-type'] = 'application/json'
 
 export const setAxiosHeaderAuthorization = (bearerToken?: string): void => {
   if (bearerToken) {

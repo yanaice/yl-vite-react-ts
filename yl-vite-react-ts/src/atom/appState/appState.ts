@@ -1,4 +1,4 @@
-import {atom} from "recoil"
+import { atom } from 'recoil'
 
 export interface IAppState {
   loading: boolean
@@ -7,10 +7,10 @@ export interface IAppState {
 }
 
 export const appState = atom<IAppState>({
-  key: "appState",
+  key: 'appState',
   default: {
     loading: false,
-    errorMsg: "",
-    successMsg: "",
+    errorMsg: '',
+    successMsg: '',
   },
 })
