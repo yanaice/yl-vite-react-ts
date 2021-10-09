@@ -26,7 +26,7 @@ interface Props {
 const Loading: React.FC<Props> = ({ active, text, children }) => {
   return (
     <StyledLoader
-      classNamePrefix='MyLoader_'
+      classNamePrefix="MyLoader_"
       active={active}
       text={text}
       spinner
