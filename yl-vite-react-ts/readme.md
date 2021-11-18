@@ -1,20 +1,16 @@
 # 0. Install
-
 `yarn install`
 
 # 1. Set up
-
 https://robertcooper.me/post/using-eslint-and-prettier-in-a-typescript-project
 
 ## Set eslint
-
 - `.eslintrc.js` <<--- config HERE
 - `yarn add eslint`
 - `@typescript-eslint/parser`: parser that will allow ESLint to lint Typescript code
 - `@typescript-eslint/eslint-plugin`: ESlint rules that are Typescript specific
 
 ## Set Typescript
-
 - `tsconfig.json` <<--- config HERE
 
 ## Set Prettier
@@ -33,7 +29,7 @@ https://robertcooper.me/post/using-eslint-and-prettier-in-a-typescript-project
 "editor.formatOnSave": true,
 ```
 
-# 2. Rules for this app
+# 2. About this APP
 
 ## Set up Theme
 - using Tailwindcss
@@ -50,28 +46,6 @@ https://robertcooper.me/post/using-eslint-and-prettier-in-a-typescript-project
 
 ## App.css
 - app className style, custom common className, extends tailwindcss
-
-## Styled-components
-- NO inline styled please <div style={{width: '10px'}}>
-
-## Folder Structure
-- config : env => config
-- pages
-  - main
-    - MainPage.tsx, MainFlow.tsx
-    - components
-      - MainComponent1.tsx
-      - MainComponent2.tsx
-- components
-- hook & atom
-- global hook & atom
-  - appState
-- utils
-
-## Use Typescript
-- prefer interface
-- use type when
-  - premitive, enum
 
 ## Common hook for making request
 - please use hook `useWrapSWR`, `useAxios`: they will control global app state such as `loading`, `error` see example in `PageLayout.tsx, Login.tsx` and error exception etc.

@@ -1,9 +1,9 @@
 module.exports = {
-  purge: {
-    content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    mode: 'all',
-    preserveHtmlElements: false,
-  },
+  // purge: {
+  //   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  //   mode: 'all',
+  //   preserveHtmlElements: false,
+  // },
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontSize: {
@@ -47,6 +47,12 @@ module.exports = {
           800: '#2d3748',
           900: '#1a202c',
         },
+      },
+      gridTemplateColumns: {
+        '1fr-auto': '1fr auto',
+        '2fr-1fr': '2fr 1fr',
+        'auto-auto': 'auto auto',
+        'auto-1fr': 'auto 1fr',
       },
     },
   },

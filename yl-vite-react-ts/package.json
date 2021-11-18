@@ -5,8 +5,8 @@
     "start": "yarn prettier && vite",
     "dev": "yarn prettier && vite",
     "build": "tsc && vite build",
-    "build-sit": "vite build --mode staging",
-    "build-prod": "vite build --mode production",
+    "build-dev": "vite build --mode dev",
+    "build-prod": "vite build --mode prod",
     "serve": "vite preview",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "prettier": "npx prettier --write ./src"
